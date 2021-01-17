@@ -33,7 +33,7 @@ async def suka(ctx, *args):
             descriptoin='This is a description',
             colour=discord.Colour.red()
         )
-        channel = client.get_channel(788898442688069692)
+        channel = client.get_channel(CHANNEL_ID)
         a = 1
         embed.set_author(name=RED_BUTTON,
                          icon_url='https://pngimg.com/uploads/exclamation_mark/exclamation_mark_PNG35.png')
@@ -60,7 +60,7 @@ async def suka(ctx, *args):
             descriptoin='This is a description',
             colour=discord.Colour.orange()
         )
-        channel = client.get_channel(788898442688069692)
+        channel = client.get_channel(CHANNEL_ID)
         a = 1
         embed.set_author(name=YELLOW_BUTTON)
 
@@ -87,7 +87,7 @@ async def suka(ctx, *args):
             descriptoin='This is a description',
             colour=discord.Colour.purple()
         )
-        channel = client.get_channel(788898442688069692)
+        channel = client.get_channel(CHANNEL_ID)
         a = 1
         embed.set_author(name=PURPLE_BUTTON)
 
