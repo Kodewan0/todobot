@@ -5,6 +5,7 @@ from main_config import *
 client = commands.Bot(command_prefix)
 client.remove_command('help')
 
+
 @client.event
 async def on_ready():
     game = discord.Game(GAME)
@@ -15,7 +16,8 @@ async def on_ready():
         await client.change_presence(status=discord.Status.online, activity=game)
         print('Bot is ready.')
 
-@client.command(name='Обязательно')
+
+@client.command(name=RED_BUTTON)
 async def suka(ctx, *args):
     author = ctx.message.author
     output = ''
@@ -33,16 +35,16 @@ async def suka(ctx, *args):
         )
         channel = client.get_channel(788898442688069692)
         a = 1
-        embed.set_author(name='Обязательно:',
+        embed.set_author(name=RED_BUTTON,
                          icon_url='https://pngimg.com/uploads/exclamation_mark/exclamation_mark_PNG35.png')
-        embed.add_field(name='Отправил:', value=author, inline=False)
+        embed.add_field(name='Sent by:', value=author, inline=False)
 
         await channel.send(embed=embed)
     else:
         print("error")
 
 
-@client.command(name='Желательно')
+@client.command(name=YELLOW_BUTTON)
 async def suka(ctx, *args):
     author = ctx.message.author
     output = ''
@@ -60,16 +62,16 @@ async def suka(ctx, *args):
         )
         channel = client.get_channel(788898442688069692)
         a = 1
-        embed.set_author(name='Желательно:')
+        embed.set_author(name=YELLOW_BUTTON)
 
-        embed.add_field(name='Отправил:', value=author, inline=False)
+        embed.add_field(name='Sent by:', value=author, inline=False)
 
         await channel.send(embed=embed)
     else:
         print("error")
 
 
-@client.command(name='советую')
+@client.command(name=PURPLE_BUTTON)
 async def suka(ctx, *args):
     author = ctx.message.author
     output = ''
@@ -87,12 +89,13 @@ async def suka(ctx, *args):
         )
         channel = client.get_channel(788898442688069692)
         a = 1
-        embed.set_author(name='Совет:')
+        embed.set_author(name=PURPLE_BUTTON)
 
-        embed.add_field(name='Советует:', value=author, inline=False)
+        embed.add_field(name='Advice from:', value=author, inline=False)
 
         await channel.send(embed=embed)
     else:
         print("error")
+
 
 client.run(TOKEN)
