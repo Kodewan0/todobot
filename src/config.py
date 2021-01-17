@@ -1,4 +1,4 @@
-TOKEN = '**********'
+TOKEN = '***********'
 
 command_prefix = '!'  # Anything you want, you got it!
 
