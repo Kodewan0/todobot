@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from config import *
+from main_config import *
 
 client = commands.Bot(command_prefix)
 client.remove_command('help')
